@@ -2,8 +2,8 @@ import React from 'react'
 
 function App() {
   return (
-    <div>
-      
+    <div className='w-full h-screen bg-zinc-800'>
+      <h1></h1>
     </div>
   )
 }
