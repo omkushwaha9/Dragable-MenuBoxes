@@ -14,7 +14,7 @@ function Card() {
         <LuDownload size=".7em" color='#fff' />
         </span>
       </div>
-      <div className='tag w-full py-4 bg-green-500'>
+      <div className='tag w-full py-4 bg-green-600'>
        <h3 className='text-md flex justify-center font-semibold'> Download Now </h3>
       </div>
       </div>
