@@ -1,14 +1,36 @@
 import React, { useRef, useState } from 'react'
 import Card from './Card'
+import { LuUpload } from "react-icons/lu";
 
 
 function Foreground() {
     const ref = useRef(null);
-    const data ={}
+    const data =[
+        {
+          desc: "This Draggable menu is Very imp as This can make the WebPage more Beautiful With draggable menue's.",
+          filesize:".4mb",
+          close:true,
+          tag:{isOpen: false, tagTitle: "Download now", tagColor: "green"},
+        },
+        {
+            desc: "This Draggable menu is Very imp as This can make the WebPage more Beautiful With draggable menue's.",
+            filesize:".9mb",
+            close:false,
+            tag:{isOpen: true, tagTitle: "Download now", tagColor: "blue"},
+          },
+          {
+            desc: "This Draggable menu is Very imp as This can make the WebPage more Beautiful With draggable menue's.",
+            filesize:".7mb",
+            close:<LuUpload />,
+            tag:{ isOpen: true, tagTitle: "upload", tagColor: "green"},
+          },
+    ];
    
   return (
-    <div ref={ref} className=' fixed top-0 z-[3] w-full h-full'>
-        <Card reference={ref}/>
+    <div ref={ref} className=' fixed top-0 z-[3] w-full h-full flex gap-5 flex-wrap p-10'>
+       {data.map((item, index)=>
+        <Card data={item} reference={ref}/>
+    )}
       
     </div>
   )
