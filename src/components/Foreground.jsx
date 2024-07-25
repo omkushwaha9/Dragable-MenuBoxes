@@ -1,12 +1,14 @@
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 import Card from './Card'
 
+
 function Foreground() {
+    const ref = useRef(null);
     const data ={}
    
   return (
-    <div  className=' fixed top-0 z-[3] w-full h-full'>
-        <Card/>
+    <div ref={ref} className=' fixed top-0 z-[3] w-full h-full'>
+        <Card reference={ref}/>
       
     </div>
   )

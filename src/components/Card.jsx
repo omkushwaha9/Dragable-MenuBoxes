@@ -1,10 +1,11 @@
 import React from 'react'
 import { FaRegFileAlt } from "react-icons/fa";
 import { LuDownload } from "react-icons/lu";
+import { motion } from "framer-motion"
 
-function Card() {
+function Card({reference}) {
   return (
-    <div className=' relative w-60 h-72 rounded-[45px] bg-zinc-900/90 text-white px-7 py-7 overflow-hidden'>
+    <motion.div drag dragConstraints={reference} className=' relative w-60 h-72 rounded-[45px] bg-zinc-900/90 text-white px-7 py-7 overflow-hidden'>
       <FaRegFileAlt/>
       <p className='text-sm mt-5 leading-tight font-semibold'>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
       <div className='footer absolute bottom-0 w-full left-0 '>
@@ -18,7 +19,7 @@ function Card() {
        <h3 className='text-md flex justify-center font-semibold'> Download Now </h3>
       </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 
