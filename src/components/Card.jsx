@@ -5,7 +5,13 @@ import { motion } from "framer-motion"
 
 function Card({reference}) {
   return (
-    <motion.div drag dragConstraints={reference} className=' relative w-60 h-72 rounded-[45px] bg-zinc-900/90 text-white px-7 py-7 overflow-hidden'>
+    <motion.div 
+    drag 
+    dragConstraints={reference} 
+    whileDrag={{scale: 1.1}} 
+    dragElastic={0.1}
+    dragTransition={{bounceStiffness:100, bounceDamping:50}}
+    className=' relative w-60 h-72 rounded-[45px] bg-zinc-900/90 text-white px-7 py-7 overflow-hidden'>
       <FaRegFileAlt/>
       <p className='text-sm mt-5 leading-tight font-semibold'>Lorem, ipsum dolor sit amet consectetur adipisicing.</p>
       <div className='footer absolute bottom-0 w-full left-0 '>
