@@ -3,5 +3,9 @@
 @tailwind utilities;
 
 *{
-  font-family: "Monaco";
+  font-family: "Comic Sans MS";
+}
+
+::selection{
+  color: rgba(240, 155, 19, 0.764);
 }
